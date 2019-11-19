@@ -1,0 +1,130 @@
+<% include menu.ejs %>
+
+
+		<!-- partial -->
+		<div class="main-panel">
+			<!-- CONTENT AQUI! -->
+
+		<div class="card">
+			
+			<div class="card-body">
+			<blockquote class="blockquote blockquote-primary">
+				<h3>Bem vindos ao nosso sistema de cinema!</h3>
+				<footer class="blockquote-footer">Controle a exibição de filmes, e gere novos ingressos!
+				</footer>
+			</blockquote>
+			</div>
+		</div>
+
+		<div class="content-wrapper">
+			<div class="row">
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+					<div class="card card-statistics">
+					<div class="card-body">
+						<div class="clearfix">
+						<div class="float-left">
+							<i class="text-danger icon-lg fas fa-film"></i>
+						</div>
+						<div class="float-right">
+							<p class="mb-0 text-right">Total de filmes</p>
+							<div class="fluid-container">
+							<h3 class="font-weight-medium text-right mb-0"><%= filmes %></h3>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+					<div class="card card-statistics">
+					<div class="card-body">
+						<div class="clearfix">
+						<div class="float-left">
+							<i class="fas fa-person-booth text-warning icon-lg"></i>
+						</div>
+						<div class="float-right">
+							<p class="mb-0 text-right">Número de salas: </p>
+							<div class="fluid-container">
+							<h3 class="font-weight-medium text-right mb-0"><%= salas %></h3>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+					<div class="card card-statistics">
+					<div class="card-body">
+						<div class="clearfix">
+						<div class="float-left">
+							<i class="fas fa-video text-success icon-lg"></i>
+						</div>
+						<div class="float-right">
+							<p class="mb-0 text-right">Número de sessões: </p>
+							<div class="fluid-container">
+							<h3 class="font-weight-medium text-right mb-0"><%= sessoes %></h3>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+					<div class="card card-statistics">
+					<div class="card-body">
+						<div class="clearfix">
+						<div class="float-left">
+							<i class="fas fa-ticket-alt text-info icon-lg"></i>
+						</div>
+						<div class="float-right">
+							<p class="mb-0 text-right">Ingressos gerados:</p>
+							<div class="fluid-container">
+							<h3 class="font-weight-medium text-right mb-0"><%= ingressos %></h3>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+			<!-- content-wrapper ends -->
+			<!-- partial:partials/_footer.html -->
+			<footer class="footer">
+				<div class="container-fluid clearfix">
+					<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Desenvolvido por Emanoel Johannes e Maria Júlia</i>
+					</span>
+				</div>
+			</footer>
+			<!-- partial -->
+			</div>
+			<!-- main-panel ends -->
+		</div>
+		<!-- page-body-wrapper ends -->
+		</div>
+		<!-- container-scroller -->
+
+
+
+		<!-- plugins:js -->
+		<script src="/assets/vendors/js/vendor.bundle.base.js"></script>
+		<script src="/assets/vendors/js/vendor.bundle.addons.js"></script>
+		<!-- endinject -->
+		<!-- Plugin js for this page-->
+		<!-- End plugin js for this page-->
+		<!-- inject:js -->
+		<script src="/assets/js/off-canvas.js"></script>
+		<script src="/assets/js/misc.js"></script>
+		<!-- endinject -->
+		<!-- Custom js for this page-->
+		<script src="/assets/js/dashboard.js"></script>
+		<!-- Include the Quill library -->
+		<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+	</body>
+
+</html>
