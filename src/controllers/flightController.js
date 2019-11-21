@@ -14,7 +14,7 @@ class flightController {
         const aircrafts = await Aircrafts.getAircrafts();
         const airports = await Airports.getAirports();
 
-        res.render('createFlight', {});
+        res.render('createFlight', { aircrafts: aircrafts, airports: airports });
     }
 }
 
