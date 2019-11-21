@@ -1,39 +1,4 @@
-<!-- <div class="right-side">
-
-    <form class="form-cinema" action="createSessao" method="POST">
-        <label for="instrumento"> Escolha o filme: </label>
-        
-        <select name="idFilme" >
-            <% for (var i in filmes) { %> 
-
-            <option value="<%= filmes[i].idFilme %>"> <%= filmes[i].nome %></option>   
-
-            <% } %>
-        </select>
-
-
-        <label for="instrumento"> Escolha a sala: </label>
-        
-        <select name="idSala" >
-            <% for (var i in salas) { %> 
-
-            <option value="<%= salas[i].idSala %>"> <%= salas[i].idSala %></option>   
-
-            <% } %>
-        </select>
-
-        
-        
-        <label for="capacidade">Digite o inicio da sessao: </label>
-        <input type="text" name="inicio" />                  
-
-        
-        <button type="submit">Criar</button>
-    </form> -->
-
     <% include menu.ejs %>
-
-
 		<!-- partial -->
 		<div class="main-panel">
 		<!-- CONTENT AQUI! -->
@@ -45,8 +10,7 @@
 					
 
 					<div style="display: flex; justify-content: space-between; margin-bottom: 30px">
-						<h4 class="card-title">Criação de sessão</h4>
-                        <a href="getSessoes" class="btn btn-success">Lista de sessões</a>
+						<h4 class="card-title">Criação de vôo</h4>
 					</div>
 					
 
@@ -60,22 +24,19 @@
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Escolha a sala</label>
                             <select class="form-control" name="idSala">
-                                <% for (var i in salas) { %> 
+                                
 
-                                <option value="<%= salas[i].idSala %>"> <%= salas[i].idSala %></option>   
+                                <option value=" salas[i].idSala %>"> = salas[i].idSala %></option>   
                     
-                                <% } %>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Escolha o filme</label>
                             <select class="form-control" name="idFilme">
-                                <% for (var i in filmes) { %> 
 
-                                <option value="<%= filmes[i].idFilme %>"> <%= filmes[i].nome %></option>   
+                                <option value=" filmes[i].idFilme %>">  filmes[i].nome %></option>   
                         
-                                <% } %>
                             </select>
                         </div>
 
@@ -92,7 +53,7 @@
 		<!-- partial:partials/_footer.html -->
 			<footer class="footer">
 				<div class="container-fluid clearfix">
-				<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Desenvolvido por Emanoel Johannes e Maria Júlia</i>
+				<span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Desenvolvido por Emanoel Johannes e Gabriel Pinheiro</i>
 				</span>
 				</div>
 			</footer>
