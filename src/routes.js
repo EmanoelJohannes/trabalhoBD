@@ -31,6 +31,7 @@ routes.get('/passengers', ticketController.passengers);
 
 // Flights routes
 routes.get('/flights', flightController.index);
+routes.get('/disableFlight/:id', flightController.disableFlight);
 routes.get('/createFlight', flightController.storeFlight);
 routes.post('/createFlight', flightController.storeFlightPOST);
 

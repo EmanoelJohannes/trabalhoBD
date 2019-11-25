@@ -28,6 +28,8 @@
 									<th class="center">Horário</th>
 									<th class="center">Vagas Restantes</th>
 									<th class="center">Duração</th>
+									<th class="center">Valor Base</th>
+									<th class="center">Status</th>
 									<th class="center">Ação</th>
 								</tr>
 
@@ -41,8 +43,16 @@
 									<td class="center"><%= flights[i].hourFormatted %></td>
 									<td class="center"><%= flights[i].capacity %></td>
 									<td class="center"><%= flights[i].duration %>h</td>
+									<td class="center"><%= flights[i].base_value %></td>
 									<td class="center">
-										<a href="deleteSala/<%= flights[i].id %> ">
+										<% if (flights[i].flightStatus == 1) { %>
+										<label class="badge badge-success">Disponível para compra</label>
+										<% } if (flights[i].flightStatus == 0) { %>  
+										<label class="badge badge-warning">Não dísponível</label>
+										<% } %>
+									</td>									
+									<td class="center">
+										<a href="disableFlight/<%= flights[i].flightId %> ">
 											<button type="button" class="btn btn-sm btn-danger">Cancelar Voo</button>
 										</a>
 									</td>

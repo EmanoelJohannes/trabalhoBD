@@ -24,6 +24,10 @@ class flightController {
 
             flights[i].hourFormatted = datefns.format(flights[i].date, "HH':'mm", {locale: pt})
             flights[i].dateFormatted = datefns.format(flights[i].date, "d'/'MM'/'yy", {locale: pt})
+
+            if (flights[i].capacity == 0){
+                flights[i].status = 0;
+            }
         }
 
         res.render('flights', {flights: flights});
@@ -43,6 +47,12 @@ class flightController {
        await Flights.storeFlight(flightData);
 
        res.redirect('/flights');
+    }
+
+    async disableFlight(req, res) {
+        console.log("oi");
+        await Flights.disableFlight(req.params.id);
+        res.redirect('/flights');
     }
 }
 

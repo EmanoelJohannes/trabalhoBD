@@ -52,6 +52,25 @@ class FlightsModel {
         return result;
     }
 
+    async disableFlight(id) {
+        var result;
+
+        await db('flights')
+            .update(({
+                status: 0
+            }))
+            .where('flights.flightId', '=', id)
+            .then((response) => {
+                result = response;
+            })
+            .catch((erro) => {
+                console.log("Erro disableFlight Model => ", erro);
+                return;
+            });
+
+        return result;
+    }
+
 }
 
 module.exports = new FlightsModel;
