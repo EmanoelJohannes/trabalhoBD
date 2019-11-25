@@ -1,15 +1,7 @@
 const express = require('express');
 var bodyParser = require('body-parser');
 
-var jsdom = require("jsdom");
-const { JSDOM } = jsdom;
-const { window } = new JSDOM();
-const { document } = (new JSDOM('')).window;
-global.document = document;
-var $ = require("jquery")(window);
-
 const app = express();
-
 
 // Seta as variaves "view engine" e "views" do express
 app.set('view engine', 'ejs');

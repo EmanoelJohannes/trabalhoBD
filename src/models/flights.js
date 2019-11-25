@@ -7,11 +7,30 @@ class FlightsModel {
 
         await db('flights')
             .select('*')
+            .join('aircrafts', 'aircrafts.id', '=', "flights.aircraft_id")
             .then((response) => {
                 result = response;
             })
             .catch((erro) => {
                 console.log("Erro getFlights Model => ", erro);
+                return;
+            });
+
+        return result;
+    }
+
+    async getFlightById(id) {
+        var result;
+
+        await db('flights')
+            .select('*')
+            .join('aircrafts', 'aircrafts.id', '=', "flights.aircraft_id")
+            .where('flights.flightId', '=', id)
+            .then((response) => {
+                result = response;
+            })
+            .catch((erro) => {
+                console.log("Erro getFlightById Model => ", erro);
                 return;
             });
 

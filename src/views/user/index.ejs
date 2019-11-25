@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Star</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style_front.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-nav">
+        <div class="content">
+            <nav>
+                <img src="/assets/images/logo-mini.svg" height="45" width="65" alt="" />
+                <a class="title" href="/dashboard">StarCompany</a>
+            </nav>
+
+            <aside>
+                <div class="profile">
+                    <div>
+                        <span>Entre em contato conosco!</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Confira abaixo os voos disponíveis</h1>
+        </header>
+        <div>
+            <ul class="flight-list">
+                <% for (var i in flights) { %>
+                
+                    <li>
+                        <a href="details/<%= flights[i].flightId %>">
+                            <div class="date">
+                                <span><%= flights[i].dateFormatted %></span>
+                            </div>
+                            <div class="flight-box">
+                                
+                                <div class="flight-status">
+                                    <span class="circle-status"><i class="fas fa-check"></i></span>
+                                    <span class="msg-status">Disponível</span>
+                                </div>
+                                <div class="flight-info row">
+                                    <div class="orig">
+                                        <span class="hour"><%= flights[i].hourFormatted %></span>
+                                        <span class="airport"><%= flights[i].airportOrigName %></span>
+                                    </div>
+                                    <div class="flight-space">
+                                        <span><%= flights[i].airportOrigSigla %> -------------------------- <%= flights[i].airportDestSigla %></span>
+                                    </div>
+                                    <div class="dest">
+                                        <span class="hour"><%= flights[i].endHourFormatted %></span>
+                                        <span class="airport"><%= flights[i].airportDestName %></span>
+                                    </div>                            
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

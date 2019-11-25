@@ -18,6 +18,23 @@ class AirportsModel {
         return result;
     }
 
+    async getAirportById(id) {
+        var result;
+
+        await db('airports')
+            .select('*')
+            .where("id", "=", id)
+            .then((response) => {
+                result = response;
+            })
+            .catch((erro) => {
+                console.log("Erro getAirportById Model => ", erro);
+                return;
+            });
+
+        return result;
+    }
+
     async storeAirport(data) {
         var result;
 

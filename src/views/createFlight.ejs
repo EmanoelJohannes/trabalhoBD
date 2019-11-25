@@ -14,7 +14,7 @@
 					</div>
 
 
-					<form class="forms-sample" action="createSessao" method="POST">
+					<form class="forms-sample" action="" method="POST">
 
 						<div class="form-group">
 							<label for="exampleInputEmail1">Horário de inicio</label>
@@ -33,7 +33,7 @@
 						</div>
 
 						<div class="form-group">
-							<label for="exampleFormControlSelect1">Origem:</label>
+							<label for="exampleFormControlSelect1">Destino:</label>
 							<select class="form-control" name="destination_id">
 								<% for (var i in airports) { %>
 
@@ -45,7 +45,7 @@
 
 						<div class="form-group">
 							<label for="exampleFormControlSelect1">Aeronave:</label>
-							<select class="form-control" name="destination_id">
+							<select class="form-control" name="aircraft_id">
 								<% for (var i in aircrafts) { %>
 
 								<option value="<%= aircrafts[i].id %>"> <%= aircrafts[i].name %> - Capacidade:
@@ -53,6 +53,11 @@
 
 								<% } %>
 							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="exampleInputEmail1">Duração esperada: </label>
+							<input class="form-control" type="time" name="duration">
 						</div>
 
 						<button type="submit" class="btn btn-success mr-2">Criar voo</button>

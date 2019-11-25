@@ -13,8 +13,8 @@
 
 					<div style="display: flex; justify-content: space-between; margin-bottom: 30px">
 						<h4 class="card-title">Lista de vôos</h4>
-						<button type="button" class="btn btn-success"><a style="text-decoration: none;"
-								href="/createFlight">Adicionar novo aeroporto</a></button>
+						<button type="button" class="btn btn-success"><a style="color: #fff;"
+								href="/createFlight">Adicionar novo voo</a></button>
 					</div>
 
 
@@ -22,26 +22,32 @@
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th class="center">Modelo</th>
-									<th class="center">Capacidade</th>
-									<th class="center">Quantidade</th>
+									<th class="center">Origem</th>
+									<th class="center">Destino</th>
+									<th class="center">Data</th>
+									<th class="center">Horário</th>
+									<th class="center">Vagas Restantes</th>
+									<th class="center">Duração</th>
 									<th class="center">Ação</th>
 								</tr>
 
 							</thead>
 							<tbody>
-								<!-- <% for (var i in flights) { %>
+								<% for (var i in flights) { %>
 								<tr>
-									<td class="center"><%= flights[i].name %> </td>
-									<td class="center"><%= flights[i].estate %> </td>
-									<td class="center"><%= flights[i].city %></td>
+									<td class="center"><%= flights[i].airportOrigName %> </td>
+									<td class="center"><%= flights[i].airportDestName %> </td>
+									<td class="center"><%= flights[i].dateFormatted %></td>
+									<td class="center"><%= flights[i].hourFormatted %></td>
+									<td class="center"><%= flights[i].capacity %></td>
+									<td class="center"><%= flights[i].duration %>h</td>
 									<td class="center">
 										<a href="deleteSala/<%= flights[i].id %> ">
-											<button type="button" class="btn btn-sm btn-danger">Deletar</button>
+											<button type="button" class="btn btn-sm btn-danger">Cancelar Voo</button>
 										</a>
 									</td>
 								</tr>
-								<% } %> -->
+								<% } %>
 							</tbody>
 						</table>
 					</div>

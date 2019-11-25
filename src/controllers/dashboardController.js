@@ -1,4 +1,3 @@
-const Sala = require('../models/salas');
 
 class dashboardController {
 

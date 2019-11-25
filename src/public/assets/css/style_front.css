@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: 0;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background: linear-gradient(120deg, #00e4d0, #5983e8);
+}
+
+body, input, button {
+    font: 14px 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+    color: #000 !important;
+}
+
+ul {
+   list-style: none; 
+}
+
+button {
+    cursor: pointer;
+}
+
+.container-nav {
+    background: #fff;
+    padding: 0 30px;
+}
+
+.content {
+    height: 64px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content > nav {
+    display: flex;
+    align-items: center;
+}
+
+.content > img {
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+}
+
+.title {
+    font-weight: bold;
+    color: #7155c1;
+}
+
+.content > aside {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+}
+
+.profile > img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.profile > div {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.profile > div > strong {
+    display: block;
+    color: #333;    
+}
+
+.profile > div > a {
+    display: block;
+    margin-top: 2px;
+    font-size: 12px;
+    color: #999;
+    
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 25px !important;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    background: rgba(255,255, 255, 0.2);
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.flight-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.flight-list > li {
+    margin-bottom: 15px;
+    background: #fff;
+    padding: 0 20px 20px;
+    border-radius: 10px;
+    min-height: 110px;
+}
+
+.flight-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.date {
+    /* border: 1px solid red; */
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.flight-box {
+    display: flex;    
+    justify-content: space-between;
+}
+
+.flight-list > li:hover {
+    transition: 0.5s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.4);
+}
+
+.flight-info {
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.flight-space {
+    align-self: center;
+    position: absolute;
+    margin-left: 280px;
+}
+
+@media (max-width: 1000px) 
+{
+    .flight-space {
+        margin: 0;
+        align-self: center;
+        position: relative;
+    }
+}
+
+.circle-status {
+    font-size: 30px;
+    color: #99CC33;
+    text-align: center;
+}
+
+.flight-status {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    padding: 20px;
+    margin-right: 40px;
+    border-right: 1px solid rgba(0,0,0,0.2)
+}
+
+.orig, .dest {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.dest {
+    margin-right: 40px;
+    text-align: right;
+}
+
+.airport {
+    color: rgba(0,0,0,0.7);
+    font-size: 14px;
+    
+}
+
+.hour {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* Details Page */
+
+.container-details {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    background: rgba(255,255, 255, 01);
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.title-details {
+    color: #282828;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.title-details > span {
+    align-self: center;
+    align-items: center;
+}
+
+.table {
+    background: rgba(255,255,255,0.0);
+    border-radius: 8px;
+    border: none;
+    color: #282828 !important
+}
+
+.info-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-details > span:first-child {
+    font-size: 22px;
+}
+
+.row-cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.row-cards > .card:first-child {
+    border: none;
+    align-self: flex-end;
+    margin-bottom: 51px;
+}
+
+.low-cost {
+    color: rgb(117, 156, 38);
+    border: 2px solid #99CC33 !important;
+}
+
+.medium-cost {
+    color: #5983e8;
+    border: 2px solid #5983e8 !important;
+}
+
+.high-cost {
+    color: #ed1650;
+    border: 2px solid #ed1650 !important;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 100%;
+    height: 1.2em;
+}
+
+.card {
+    margin: 0 2px;
+    padding: 8px;
+    text-align: center;
+    min-width: 191px !important;
+}
+
+.buy-box {
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    align-items: center;
+}
+
+.buy-box > button {
+    background: #ed1650;
+    border: none;
+    padding: 15px;
+    margin-left: 15px;
+}
+
+.buy-box > button:hover {
+    background: #9c0e34;
+}
+
+
+.modal-footer > button {
+    background: #ed1650;
+    border: none;
+}
+
+.modal-footer > button:hover {
+    background: #9c0e34;
+    border: none;
+}
+
+.price {
+    font-size: 30px;
+    color: #ed1650;
+    margin-left: 15px;
+}
