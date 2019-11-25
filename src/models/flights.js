@@ -57,7 +57,7 @@ class FlightsModel {
 
         await db('flights')
             .update(({
-                status: 0
+                flightStatus: 0
             }))
             .where('flights.flightId', '=', id)
             .then((response) => {

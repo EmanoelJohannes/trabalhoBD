@@ -13,7 +13,8 @@
 
 					<div style="display: flex; justify-content: space-between; margin-bottom: 30px">
 						<h4 class="card-title">Lista de aeroportos</h4>
-						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Adicionar novo	voo</button>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Adicionar novo
+							aeroporto</button>
 					</div>
 
 
@@ -21,9 +22,10 @@
 						<table class="table table-striped">
 							<thead>
 								<tr>
-									<th class="center">Modelo</th>
-									<th class="center">Capacidade</th>
-									<th class="center">Quantidade</th>
+									<th class="center">Nome</th>
+									<th class="center">Estado</th>
+									<th class="center">Cidade</th>
+									<th class="center">Sigla</th>
 									<th class="center">Ação</th>
 								</tr>
 
@@ -34,6 +36,7 @@
 									<td class="center"><%= airports[i].name %> </td>
 									<td class="center"><%= airports[i].estate %> </td>
 									<td class="center"><%= airports[i].city %></td>
+									<td class="center"><%= airports[i].sigla %></td>
 									<td class="center">
 										<a href="deleteSala/<%= airports[i].id %> ">
 											<button type="button" class="btn btn-sm btn-danger">Deletar</button>
@@ -78,6 +81,12 @@
 						<label for="capacidade" class="col-sm-3 col-form-label">Nome</label>
 						<div class="col-sm-9">
 							<input class="form-control" name="name">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="capacidade" class="col-sm-3 col-form-label">Sigla atribuída ao aeroporto</label>
+						<div class="col-sm-9">
+							<input class="form-control" name="sigla">
 						</div>
 					</div>
 					<div class="form-group row">
