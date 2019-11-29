@@ -2,16 +2,19 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Star</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style_front.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Star</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style_front.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -35,96 +38,117 @@
     <div class="container-details">
         <header>
             <div class="title-details">
-                <h2><%= flights[0].airportOrigSigla %> - <%= flights[0].airportDestSigla %> às <%= flights[0].hourFormatted %></h2>
-                <span>Duração: <%= flights[0].duration %>h</span>              
+                <h2><%= flights[0].airportOrigSigla %> - <%= flights[0].airportDestSigla %> às
+                    <%= flights[0].hourFormatted %></h2>
+                <span>Duração: <%= flights[0].duration %>h</span>
             </div>
 
             <div class="info-details">
-                <span><%= flights[0].dateFormatted %> , previsão de chegada às <%= flights[0].endHourFormatted %>h</span>
-                <hr/>
+                <span><%= flights[0].dateFormatted %> , previsão de chegada às
+                    <%= flights[0].endHourFormatted %>h</span>
+                <hr />
                 <span><strong>De:</strong> <%= flights[0].airportOrigName %></span>
                 <span><strong>Para:</strong> <%= flights[0].airportDestName %></span>
                 <span><strong>Aeronave prevista:</strong> <%= flights[0].name %></span>
             </div>
-            
+
         </header>
-        
+
         <div class="row-cards">
-            <div class="card" >
+            <div class="card">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Bagagem de mão 1kg</li>
                     <li class="list-group-item">Bagagem despachada</li>
                     <li class="list-group-item">Seleção de assento</li>
                 </ul>
             </div>
-            <div class="card low-cost" >
+            <div class="card low-cost">
                 <h3>Light</h3>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><i class="fas fa-check-circle"></i></li>
                     <li class="list-group-item">Custo extra</li>
                     <li class="list-group-item">Custo Extra</li>
-                    <li class="list-group-item"><input type="radio" onclick="alterar(<%= flights[0].base_value %>, 0)" name="val"></li>
+                    <li class="list-group-item"><input type="radio" onclick="alterar(<%= flights[0].base_value %>, 0)"
+                            name="val"></li>
                 </ul>
             </div>
-            <div class="card medium-cost" >
+            <div class="card medium-cost">
                 <h3>Plus</h3>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><i class="fas fa-check-circle"></i></li>
                     <li class="list-group-item">1 mala</li>
                     <li class="list-group-item"><i class="fas fa-check-circle"></i></li>
-                    <li class="list-group-item"><input type="radio" onclick="alterar(<%= flights[0].base_value %>, 100)" name="val"></li>
+                    <li class="list-group-item"><input type="radio" onclick="alterar(<%= flights[0].base_value %>, 100)"
+                            name="val"></li>
                 </ul>
             </div>
-            <div class="card high-cost" >
+            <div class="card high-cost">
                 <h3>Topper</h3>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><i class="fas fa-check-circle"></i></li>
                     <li class="list-group-item">2 malas</li>
                     <li class="list-group-item"><i class="fas fa-check-circle"></i></li>
-                    <li class="list-group-item"><input type="radio" onclick="alterar(<%= flights[0].base_value %>, 200)" name="val"></li>
+                    <li class="list-group-item"><input type="radio" onclick="alterar(<%= flights[0].base_value %>, 200)"
+                            name="val"></li>
                 </ul>
-            </div>                                      
+            </div>
         </div>
 
-        <hr/>
+        <hr />
 
         <div class="buy-box">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Comprar</button>
-            
-            <span class="price">R$<%= flights[0].base_value %>,00</span> 
+
+
+            <% if (flights[0].flightStatus == 1) { %>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+                data-target="#modalExemplo">Comprar</button>
+            <% } else { %>
+            <button type="button" disabled class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">Não
+                disponível</button> <% } %>
+
+            <span class="price">R$<%= flights[0].base_value %>,00</span>
             <span>Preço final:</span>
         </div>
-        
+
     </div>
 
 
     <!-- Modal -->
-    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Insira seus dados para compra</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-            <form action="" method="POST">
-                <input type="hidden" name="flightId" value="<%= flights[0].flightId %>">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Nome completo</label>
-                    <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Emanoel Johannes C. Lazaro">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Insira seus dados para compra</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Email</label>
-                    <input type="email" class="form-control" name="email" id="exampleInputPassword1" placeholder="example@gmail.com">
-                    <small id="emailHelp" class="form-text text-muted">Entraremos em contato pelo email para finalização da compra.</small>
-                </div>               
-            </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary">Comprar</button>
-            </div>
-            </form>
+                <div class="modal-body">
+                    <form action="" method="POST">
+                        <input type="hidden" name="flightId" value="<%= flights[0].flightId %>">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Nome completo</label>
+                            <input type="text" class="form-control" name="name" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Emanoel Johannes C. Lazaro">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Email</label>
+                            <input type="email" class="form-control" name="email" id="exampleInputPassword1"
+                                placeholder="example@gmail.com">
+                            <small id="emailHelp" class="form-text text-muted">Entraremos em contato pelo email para
+                                finalização da compra.</small>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <% if (flights[0].flightStatus == 1) { %>
+                    <button type="submit" class="btn btn-primary">Comprar</button>
+                    <% } else { %>
+                    <button type="submit" disable class="btn btn-primary">Não disponível</button>
+                    <% } %>
+
+                </div>
+                </form>
             </div>
         </div>
     </div>

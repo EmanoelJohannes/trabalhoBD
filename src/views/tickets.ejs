@@ -20,11 +20,11 @@
 							<thead>
 								<tr>
 									<th class="center">Id do Voo</th>
-                                    <th class="center">Passageiro</th>
+									<th class="center">Passageiro</th>
 									<th class="center">Data da compra</th>
-                                    <th class="center">Origem</th>
-                                    <th class="center">Destino</th>
-                                    <th class="center">Horário do voo</th>
+									<th class="center">Origem</th>
+									<th class="center">Destino</th>
+									<th class="center">Horário do voo</th>
 								</tr>
 
 							</thead>
@@ -33,10 +33,10 @@
 								<tr>
 									<td class="center"><%= tickets[i].flightId %> </td>
 									<td class="center"><%= tickets[i].name %> </td>
-                                    <td class="center"><%= tickets[i].dateFormatted %></td>
-                                    <td class="center"><%= tickets[i].airportOrigName %></td>
-                                    <td class="center"><%= tickets[i].airportDestName %></td>
-                                    <td class="center"><%= tickets[i].hourFormatted %></td>
+									<td class="center"><%= tickets[i].dataCompra %></td>
+									<td class="center"><%= tickets[i].airportOrigName %></td>
+									<td class="center"><%= tickets[i].airportDestName %></td>
+									<td class="center"><%= tickets[i].hourFormatted %></td>
 								</tr>
 								<% } %>
 							</tbody>

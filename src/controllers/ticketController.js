@@ -21,6 +21,8 @@ class airportController {
             tickets[i].airportOrigName = airportOrig[0]['name'];
             tickets[i].airportDestName = airportDest[0]['name'];
 
+            tickets[i].dataCompra = datefns.format(new Date(), "d'/'MM'/'yy", { locale: pt });
+
         }
 
         console.log(tickets);
